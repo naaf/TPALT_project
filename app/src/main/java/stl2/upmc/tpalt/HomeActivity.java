@@ -45,7 +45,12 @@ public class HomeActivity extends AppCompatActivity
                 Toast.makeText(HomeActivity.this, "ok", Toast.LENGTH_SHORT).show();
             }
         });
-
+        adb.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                //On affiche dans un Toast le text annuler
+                Toast.makeText(HomeActivity.this, "annuler", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -56,12 +61,7 @@ public class HomeActivity extends AppCompatActivity
                 adb.show();
             }
         });
-        adb.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                //Lorsque l'on cliquera sur annuler on quittera l'application
-                finish();
-            }
-        });
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
