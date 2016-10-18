@@ -8,20 +8,19 @@ import java.util.Set;
  * Created by ashraf on 16/10/2016.
  */
 
-public class Seance {
+public class Evenement {
     private String nom;
-    private TypeSeance type;
-    private HashMap<ContactInterneIF, Boolean> listParticipant;
 
-    public Seance(String nom,TypeSeance tyoe) {
+    private HashMap<Contact, Boolean> listParticipant;
+
+    public Evenement(String nom) {
         this.nom = nom;
-        this.type = tyoe;
+
         this.listParticipant = new HashMap<>();
     }
 
-    public Seance(String nom, TypeSeance type, List<ContactInterneIF> listParticipant) {
+    public Evenement(String nom, List<Contact> listParticipant) {
         this.nom = nom;
-        this.type = type;
         setListParticipant(listParticipant,false);
     }
 
@@ -29,25 +28,17 @@ public class Seance {
         this.nom = nom;
     }
 
-    public TypeSeance getType() {
-        return type;
-    }
-
-    public void setType(TypeSeance type) {
-        this.type = type;
-    }
-
-    public Set<ContactInterneIF> getListParticipant() {
+    public Set<Contact> getListParticipant() {
         return listParticipant.keySet();
     }
 
-    public void setListParticipant(List<ContactInterneIF> listParticipant, boolean pre) {
+    public void setListParticipant(List<Contact> listParticipant, boolean pre) {
         this.listParticipant = new HashMap<>();
-        for ( ContactInterneIF key : listParticipant)
+        for ( Contact key : listParticipant)
             this.listParticipant.put(key,pre);
     }
 
-    public void addParticipant(ContactInterneIF con, boolean pre){
+    public void addParticipant(Contact con, boolean pre){
         this.listParticipant.put(con,pre);
     }
     public int getSize(){

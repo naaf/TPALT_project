@@ -1,32 +1,29 @@
 package stl2.upmc.tpalt;
 
 import android.content.Context;
-import android.graphics.Paint;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
-import stl2.upmc.tpalt.core.Seance;
+import stl2.upmc.tpalt.core.Evenement;
 
 /**
  * Created by ashraf on 16/10/2016.
  */
 
-public class SeanceAdapter extends ArrayAdapter<Seance> {
+public class SeanceAdapter extends ArrayAdapter<Evenement> {
     private static class ViewHolder {
         public TextView textViewTitre;
         public TextView textViewNB;
         public ImageView imageView;
     }
-    public SeanceAdapter(Context context, List<Seance> objects) {
+    public SeanceAdapter(Context context, List<Evenement> objects) {
         super(context, R.layout.list_item,objects);
     }
 
@@ -45,7 +42,7 @@ public class SeanceAdapter extends ArrayAdapter<Seance> {
         }
 
         final ViewHolder holder = (ViewHolder)convertView.getTag();
-        final Seance item = getItem(position);
+        final Evenement item = getItem(position);
         holder.textViewTitre.setText(item.getNom());
         holder.textViewNB.setText("participant : " + item.getSize());
 

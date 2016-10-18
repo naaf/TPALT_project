@@ -20,18 +20,11 @@
             android:layout_weight="2"
             android:hint="filtre" />
 
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:layout_weight="1" />
-
-        <Button
-            android:text="+"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/ic_menu_search" />
 
     </LinearLayout>
 
