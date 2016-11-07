@@ -86,11 +86,7 @@ public class HomeActivity extends AppCompatActivity
             showListSeance();
         } else if (id == R.id.nav_contact) {
             showListContact();
-        } else if (id == R.id.nav_groupe) {
-           //Intent t = new Intent(getBaseContext(), SelectionContactActivity.class);
-            //startActivity(t);
-
-        } else if (id == R.id.nav_stat) {
+        }  else if (id == R.id.nav_stat) {
             Intent t = new Intent(getBaseContext(), GraphicalActivity.class);
             startActivity(t);
         }

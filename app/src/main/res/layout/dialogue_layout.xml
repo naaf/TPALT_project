@@ -9,7 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:layout_gravity="center_vertical|center_horizontal"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -18,5 +22,9 @@
         android:ems="10"
         android:id="@+id/name"
         android:hint="name"
-        android:textAlignment="center" />
+
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:layout_gravity="center_vertical|center_horizontal"/>
 </LinearLayout>

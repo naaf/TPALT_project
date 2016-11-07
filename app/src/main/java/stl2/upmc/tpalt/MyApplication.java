@@ -35,9 +35,16 @@ public class MyApplication extends Application {
     }
 
     private void init() {
-        events.add(new Evenement("test1"));
+        events.add(new Evenement("AAGA"));
+        events.add(new Evenement("TAS"));
+        events.add(new Evenement("PPC"));
+        events.add(new Evenement("DAR"));
+        events.add(new Evenement("TPALT"));
         contacts.add(new Contact("ashraf", "nasser"));
         contacts.add(new Contact("franck", "nazanga"));
+        contacts.add(new Contact("zak", "amri"));
+        contacts.add(new Contact("wail", "wail"));
+        contacts.add(new Contact("moatez", "moatez"));
     }
 
     public List<OccurrenceEvenement> getOccurrenceEvenements() {

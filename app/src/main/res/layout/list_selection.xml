@@ -9,7 +9,15 @@
         android:orientation="vertical">
 
         <!-- TODO: Update blank fragment layout -->
-
+        <TextView
+            android:id="@+id/gg"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textSize="20sp"
+            android:text="AJOUTER PARTICIPANT"
+            android:layout_gravity="center_vertical|center_horizontal"/>
 
         <ListView
             android:id="@+id/listSelectionView"

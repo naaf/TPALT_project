@@ -12,7 +12,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -57,13 +60,16 @@ public class ConfigureSeance extends AppCompatActivity {
         adapter = new ContactAdapter(this,contacts, R.layout.item_participant, MyR.CONTACT_SELECTION);
         listView.setAdapter(adapter);
         Intent intent = getIntent();
+
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+
         if (intent.getExtras() != null && intent.hasExtra(MyR.INDEX_EVENEMENT)) {
             positionEvenement = intent.getExtras().getInt(MyR.INDEX_EVENEMENT);
             ContactAdapter adp = (ContactAdapter) adapter;
             adp.setIdexEvent(positionEvenement);
             event = app.getEvents().get(positionEvenement);
             name.setText(event.getNom());
-            date.setText(event.getDateCreation().toString());
+            date.setText(dateFormat.format(event.getDateCreation()));
             desc.setText(event.getDescription());
             participants = event.getListParticipant();
             for( Contact c : participants){

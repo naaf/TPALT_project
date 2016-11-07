@@ -3,16 +3,12 @@ package stl2.upmc.tpalt;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.achartengine.ChartFactory;
@@ -21,6 +17,10 @@ import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYSeries;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
+
+import java.util.List;
+
+import stl2.upmc.tpalt.core.Contact;
 
 public class GraphicalActivity extends AppCompatActivity {
 
@@ -31,19 +31,19 @@ public class GraphicalActivity extends AppCompatActivity {
     private GoogleApiClient client;
     private View chart;
     private Button btnChart;
+    private MyApplication app;
 
-    private int[] x = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
-    private String[] friends = new String[] { "Tuan", "Thai", "Tin", "Nguyen", "Thanh", "Phong", "Nhan", "Dung", "Son",
-            "Thuy", "Cuong", "Khanh" };
+    private int[] x ;
+    private List<Contact> contacts;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graphical);
-
+        app = (MyApplication) this.getApplication();
         btnChart = (Button) findViewById(R.id.btn_chart);
-
+        contacts = app.getContacts();
         // Setting event click listener for the button btn_chart
         btnChart.setOnClickListener(onClickListener());
 
@@ -59,9 +59,11 @@ public class GraphicalActivity extends AppCompatActivity {
         };
     }
     private void createChart() {
-        int[] x = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
+        int[] x = new int[contacts.size()];
         int[] height = { 170, 180, 177, 175, 173, 170, 173, 182, 174, 177, 168, 172};
 
+        for(int i=0; i < contacts.size() ; i++)
+            x[i] = i;
         // Creating an XYSeries for Height
         XYSeries expenseSeries = new XYSeries("Height");
         // Adding data to Height Series
@@ -153,7 +155,7 @@ public class GraphicalActivity extends AppCompatActivity {
         renderer.setMargins(new int[] { 10, 10, 10, 10 });
 
         for (int i = 0; i < x.length; i++) {
-            renderer.addXTextLabel(i, friends[i]);
+            renderer.addXTextLabel(i, contacts.get(i).getNom());
            // renderer.setXLabelsPadding(10);
             //renderer.setYLabelsPadding(10);
         }
