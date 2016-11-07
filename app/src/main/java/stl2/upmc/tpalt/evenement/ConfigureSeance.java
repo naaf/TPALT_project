@@ -103,7 +103,8 @@ public class ConfigureSeance extends AppCompatActivity {
         addParticipant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for( Contact c : event.getListParticipant()){
+
+                for( Contact c : app.getContacts()){
                     c.checked = false;
                 }
                 Intent t = new Intent(view.getContext(), SelectionContactActivity.class);
