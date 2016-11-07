@@ -68,7 +68,7 @@ public class GraphicalActivity extends AppCompatActivity {
             height[i] = app.getNbPresence(contacts.get(i)) * 10;
         }
         // Creating an XYSeries for Height
-        XYSeries expenseSeries = new XYSeries("Height");
+        XYSeries expenseSeries = new XYSeries("Presence");
         // Adding data to Height Series
         for (int i = 0; i < x.length; i++) {
             expenseSeries.add(i, height[i]);
@@ -88,7 +88,7 @@ public class GraphicalActivity extends AppCompatActivity {
         XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
         renderer.setXLabels(0);
         renderer.setChartTitle("Comparing height chart ");
-        renderer.setXTitle("Friends Name");
+        renderer.setXTitle("Participant Name");
         renderer.setYTitle("Unit in centimeter");
 
         /***
