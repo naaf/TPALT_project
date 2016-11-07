@@ -12,7 +12,7 @@
 
 
         <ListView
-            android:id="@+id/listCheckView"
+            android:id="@+id/listSelectionView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -26,14 +26,14 @@
         android:layout_gravity="bottom|end">
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/listCheck_ok"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Valider" />
+        android:id="@+id/listSelection_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Valider" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/listCheck_no"
+            android:id="@+id/listSelection_no"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
