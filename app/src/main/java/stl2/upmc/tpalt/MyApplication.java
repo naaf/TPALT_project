@@ -92,4 +92,14 @@ public class MyApplication extends Application {
         return true;
     }
 
+    public int getNbPresence(Contact c){
+        int nb = 0;
+        for (OccurrenceEvenement occ : occurrenceEvenements){
+            if(occ.getEvenement().isPresent(c)){
+                nb++;
+            }
+        }
+        return nb;
+    }
+
 }

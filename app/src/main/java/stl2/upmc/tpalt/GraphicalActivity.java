@@ -60,10 +60,13 @@ public class GraphicalActivity extends AppCompatActivity {
     }
     private void createChart() {
         int[] x = new int[contacts.size()];
-        int[] height = { 170, 180, 177, 175, 173, 170, 173, 182, 174, 177, 168, 172};
+        int[] height = new int[contacts.size()];;
 
         for(int i=0; i < contacts.size() ; i++)
             x[i] = i;
+        for(int i=0; i < contacts.size() ; i++){
+            height[i] = app.getNbPresence(contacts.get(i)) * 10;
+        }
         // Creating an XYSeries for Height
         XYSeries expenseSeries = new XYSeries("Height");
         // Adding data to Height Series

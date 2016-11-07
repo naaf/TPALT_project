@@ -1,5 +1,7 @@
 package stl2.upmc.tpalt.core;
 
+import android.widget.Button;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -13,7 +15,7 @@ import java.util.Set;
 
 public class Evenement {
     private String nom;
-    private Map<Contact, Boolean> listParticipant;
+    private HashMap<Contact, Boolean> listParticipant;
     private Date dateCreation;
     private String description;
 
@@ -35,11 +37,6 @@ public class Evenement {
         this.nom = new String(event.nom);
         setListParticipant(new ArrayList<Contact>(event.getListParticipant()), false);
 
-    }
-
-
-    public void setListParticipant(Map<Contact, Boolean> listParticipant) {
-        this.listParticipant = listParticipant;
     }
 
     @Override
@@ -102,6 +99,11 @@ public class Evenement {
 
     public void present(Contact c) {
         listParticipant.put(c, true);
+    }
+    public boolean isPresent(Contact c) {
+        if(listParticipant.containsKey(c))
+            return listParticipant.get(c);
+        return false;
     }
     public void init(){
         for(Map.Entry e : listParticipant.entrySet() ){
