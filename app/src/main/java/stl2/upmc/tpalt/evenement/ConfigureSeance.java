@@ -15,13 +15,12 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
 import stl2.upmc.tpalt.MyApplication;
 import stl2.upmc.tpalt.R;
-import stl2.upmc.tpalt.SelectionContactActivity;
+import stl2.upmc.tpalt.contacts.SelectionContactActivity;
 import stl2.upmc.tpalt.contacts.ContactAdapter;
 import stl2.upmc.tpalt.core.Contact;
 import stl2.upmc.tpalt.core.Evenement;

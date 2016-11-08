@@ -15,15 +15,6 @@
     tools:showIn="@layout/app_bar_home">
 
 
-   <!--
-   <fragment
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="stl2.upmc.tpalt.evenement.ListSeance"
-        android:id="@+id/fragment"
-        tools:layout="@layout/fragment_list_seance" />
-        -->
-
    <FrameLayout
        android:id="@+id/mainFragmentContainer"
        android:layout_width="match_parent"

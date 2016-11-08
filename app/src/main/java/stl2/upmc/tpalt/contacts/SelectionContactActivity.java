@@ -1,4 +1,4 @@
-package stl2.upmc.tpalt;
+package stl2.upmc.tpalt.contacts;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +16,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import stl2.upmc.tpalt.MyApplication;
+import stl2.upmc.tpalt.R;
 import stl2.upmc.tpalt.contacts.ContactAdapter;
 import stl2.upmc.tpalt.contacts.ContactSelectionAdapter;
 import stl2.upmc.tpalt.core.Contact;

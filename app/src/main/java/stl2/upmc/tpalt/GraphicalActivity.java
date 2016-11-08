@@ -99,7 +99,7 @@ public class GraphicalActivity extends AppCompatActivity {
         // setting text size of the axis title
         renderer.setAxisTitleTextSize(24);
         // setting text size of the graph lable
-        renderer.setLabelsTextSize(12);
+        renderer.setLabelsTextSize(14);
         // setting zoom buttons visiblity
         renderer.setZoomButtonsVisible(false);
         // setting pan enablity which uses graph to move on both axis
@@ -155,7 +155,7 @@ public class GraphicalActivity extends AppCompatActivity {
         renderer.setPointSize(4f);
         // setting the margin size for the graph in the order top, left, bottom,
         // right
-        renderer.setMargins(new int[] { 10, 10, 10, 10 });
+        renderer.setMargins(new int[] { 20, 20, 10, 10 });
 
         for (int i = 0; i < x.length; i++) {
             renderer.addXTextLabel(i, contacts.get(i).getNom());

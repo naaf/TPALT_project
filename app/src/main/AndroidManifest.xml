@@ -24,7 +24,7 @@
             android:label="@string/title_activity_check_presence"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".evenement.ConfigureSeance" />
-        <activity android:name=".SelectionContactActivity" />
+        <activity android:name=".contacts.SelectionContactActivity" />
         <activity android:name=".GraphicalActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
